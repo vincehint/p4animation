@@ -30,7 +30,7 @@ class TestPanel(bpy.types.Panel):
     
     def draw(self, context):
         layout = self.layout
-        
+        layout.scale_y = 1.4
         row = layout.row()
         row.label(text= "Add An Object", icon= 'CUBE') 
         row = layout.row() 
@@ -58,11 +58,13 @@ class PanelA(bpy.types.Panel):
         row = layout.row()
         row.operator("transform.resize")
         row = layout.row()
-        row.prop(obj, "scale")
+        layout.scale_y = 1.4
+        col = layout.column()
+        col.prop(obj, "scale")
         
         
 class PanelB(bpy.types.Panel):
-    bl_label = "PanelB"
+    bl_label = "Specials"
     bl_idname = "PT_PanelB"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
@@ -72,9 +74,15 @@ class PanelB(bpy.types.Panel):
     
     def draw(self, context):
         layout = self.layout
-        
+        layout.scale_y = 1.4
         row = layout.row()
-        row.label(text= "This Is Panel B", icon= "FONT_DATA")
+        row.label(text= "Select a Special Option", icon= "COLOR_BLUE")
+        row = layout.row()
+        row.operator("object.shade_smooth")
+        row = layout.row()
+        row.operator("object.subdivision_set")
+        row = layout.row()
+        row.operator("object.modifier_add")
         
 def register():
     bpy.utils.register_class(TestPanel)
