@@ -20,6 +20,9 @@ What is here is my start at adding my own nodes. I created a shader library feat
 ## How Do I Use Them?
 Well, first you need to for and clone this repo. You will need to use VSCode. Once you have cloned the repo and saved it in your VSCode you will need to download Blender 2.9. In Blender 2.9 go to the scripting tab and then open the file of your choosing.
 
+### For addObject.py
+Open the addObject.py file in your scripting area and click the triangle to run. Once finished a menu will pop up on the right side of your layout view which you can get to using the small triangle pointing left. At the bottom will be "shapes". From there you can click a shape and it will populate in the middle of your layout.
+
 ### For anim.py
 Open the anim.py in your scripting area of blender and click the triangle to run. Once the code has run go to you animation panel and click play.
 
@@ -36,6 +39,12 @@ This one you can just open in Blender normally. Go to file, click Open, and then
 My MVP started as creating a short animation in blender. It was later ammended to be able to manipulate objects and create new nodes in Blender. 
 
 Stretch goals were to actually stylize the animation so it wasn't just grey. 
+
+## Helpful Stuff
+
+Make sure you save often when running Python in Blender as Python has a tendancy to crash the program.
+
+Here is a link to the blender documentation for using Python: https://docs.blender.org/api/current/info_quickstart.html
 
 Here is a link to the github repository: https://github.com/vincehint/p4animation
 
